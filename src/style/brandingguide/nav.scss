@@ -1,0 +1,42 @@
+.main_nav {
+	background-color: $anthracite;
+	padding: 22px 0 17px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+
+	&__logo {
+		height: 4.006rem;
+		margin: 0 10.15rem 0 0;
+		object-fit: contain;
+		width: 7.975rem;
+	}
+
+	&__list {
+		align-items: flex-end;
+		display: flex;
+		gap: 2rem;
+		list-style: none;
+		margin: 0;
+	}
+
+	&__listitem {
+		border-bottom: none;
+		font-size: 1.375rem;
+		font-weight: 500;
+		scroll-behavior: smooth;
+
+		&--link {
+			color: $white;
+			text-decoration: none;
+		}
+	}
+}
+
+.nav_wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 1240px;
+}

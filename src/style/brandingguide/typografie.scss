@@ -1,0 +1,14 @@
+.typo {
+
+	&__fonts {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: 1fr 1fr;
+        
+		&--imgBot {
+			grid-column: 1/ -1;
+			grid-row: 3;
+			margin-top: -1rem;
+		}
+	}
+}

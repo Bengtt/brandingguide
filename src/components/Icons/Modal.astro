@@ -1,0 +1,72 @@
+
+<dialog id="dialog">
+    <div class="modul_wrapper">
+        <button class="modul_exit" id="close">
+                <img class="modul_exit__img" src="/public/buttons/exit_btn.svg" alt="">
+        </button> 
+        <div class="modul_grid">
+            <figure class="modul_left">
+                <img class="modul_left__img" id="modal_img" src="" alt="">
+                <figcaption >
+                    <p class="modul_left__title" id="modal_title"></p>
+                </figcaption>
+                <div class="color_bobble">
+                    <div class="color_bobble__item color_bobble__item--anthracite"></div>
+                    <div class="color_bobble__item color_bobble__item--soft_white"></div>
+                    <div class="color_bobble__item color_bobble__item--magenta"></div>
+                    <div class="color_bobble__item color_bobble__item--blue"></div>
+                    <div class="color_bobble__item color_bobble__item--green"></div>
+                    <div class="color_bobble__item color_bobble__item--orange"></div>
+                </div>
+            </figure>
+            <form action="" class="modul_right">
+                <div class="modul_right__color">
+                    <p class="modul_heading">Color</p>
+                    <ul  class="modul_right__color--choice" id="color_choice">
+                        <li class="modul_checkbox">
+                            <input class="modul_checkbox__input" type="checkbox" name="anthracite" id="anthracite">
+                            <label  class="modul_checkbox__label modul_checkbox__label--anthracite" for="anthracite">Anthracite</label>
+                        </li>
+                        <li class="modul_checkbox">
+                            <input class="modul_checkbox__input" type="checkbox" name="soft_white" id="soft_white">
+                            <label class="modul_checkbox__label modul_checkbox__label--soft_white" for="soft_white">Soft White</label>
+                        </li>
+                        <li class="modul_checkbox">
+                            <input class="modul_checkbox__input" type="checkbox" name="magenta" id="magenta">
+                            <label class="modul_checkbox__label modul_checkbox__label--magenta" for="magenta">Magenta</label>
+                        </li>
+                        <li class="modul_checkbox">
+                            <input class="modul_checkbox__input" type="checkbox" name="blue" id="blue">
+                            <label class="modul_checkbox__label modul_checkbox__label--blue" for="blue">Blue</label>
+                        </li>
+                        <li class="modul_checkbox">
+                            <input type="checkbox" name="green" id="green">
+                            <label class="modul_checkbox__label modul_checkbox__label--green" for="green">Green</label>
+                        </li>
+                        <li class="modul_checkbox">
+                            <input class="modul_checkbox__input" type="checkbox" name="orange" id="orange">
+                            <label class="modul_checkbox__label modul_checkbox__label--orange" for="orange">Orange</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modul_right__file">
+                    <p class="modul_heading">Datei</p>
+                    <div id="file_choice" class="modul_right__file--choice">
+                        <div class="modul_checkbox">
+                            <input class="modul_checkbox__input" type="checkbox" name=".svg" id="svg">
+                            <label class="modul_checkbox__label" for="svg">SVG</label>
+                        </div>
+                        <div class="modul_checkbox">
+                            <input class="modul_checkbox__input" type="checkbox" name=".png" id="png">
+                            <label class="modul_checkbox__label" for="png">PNG</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="download_modul">
+                    <a href="" class="download_modul__btn" download="" id="download_btn">Herunterladen</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</dialog>
+

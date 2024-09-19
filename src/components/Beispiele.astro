@@ -1,0 +1,71 @@
+---
+interface Props {
+    example1_pos_img: string;
+    example2_pos_img: string;
+    example3_pos_img: string;
+
+    example1_neg_img: string;
+    example2_neg_img: string;
+    example3_neg_img: string;
+
+    example1_pos_text?: string;
+    example2_pos_text?: string;
+    example3_pos_text?: string;
+
+    example1_neg_text?: string;
+    example2_neg_text?: string;
+    example3_neg_text?: string;
+}
+const {
+    example1_pos_img, example2_pos_img, example3_pos_img,
+    example1_neg_img, example2_neg_img, example3_neg_img,
+    example1_pos_text, example2_pos_text, example3_pos_text,
+    example1_neg_text, example2_neg_text, example3_neg_text,
+} = Astro.props;
+---
+<section class="example wrapper">
+
+    <h2 class="example__heading">Positiv-Beispiel</h2>
+    <div class="example__pos">
+        <figure class="example__container">
+            <img class="example__container--img" src={example1_pos_img} alt="">
+            <figcaption class="example__container--text">
+                <p>{example1_pos_text}</p>
+            </figcaption>
+        </figure>
+        <figure class="example__container">
+            <img class="example__container--img" src={example2_pos_img} alt="">
+            <figcaption class="example__container--text">
+                <p>{example2_pos_text}</p>
+            </figcaption>
+        </figure>
+        <figure class="example__container">
+            <img class="example__container--img" src={example3_pos_img} alt="">
+            <figcaption class="example__container--text">
+                <p>{example3_pos_text}</p>
+            </figcaption>
+        </figure>
+    </div>
+
+    <h2 class="example__heading">Negativ-Beispiel</h2>
+    <div class="example__neg">
+        <figure class="example__container">
+            <img class="example__container--img" src={example1_neg_img} alt="">
+            <figcaption class="example__container--text">
+                <p><Fragment set:html={example1_neg_text} /></p>
+            </figcaption>
+        </figure>
+        <figure class="example__container">
+            <img class="example__container--img" src={example2_neg_img} alt="">
+            <figcaption class="example__container--text">
+                <p>{example2_neg_text}</p>
+            </figcaption>
+        </figure>
+        <figure class="example__container">
+            <img class="example__container--img" src={example3_neg_img} alt="">
+            <figcaption class="example__container--text">
+                <p>{example3_neg_text}</p>
+            </figcaption>
+        </figure>
+    </div>
+</section>

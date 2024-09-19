@@ -1,0 +1,43 @@
+stages:
+  - deploy
+
+default:
+  image: europe-docker.pkg.dev/ekontor24-infrastructure/tools/ci-cd:12.1.0
+  before_script:
+    - echo "GitLab CI/CD | Print all environment variables"
+    - env
+    - echo "GitLab CI/CD | EXPORT"
+    - export
+    - echo "DOCKER INFO"
+    - docker info
+    - echo "GitLab CI/CD | login to gcloud"
+    - gcloud auth activate-service-account  --key-file ${GCP_KEY_FILE_JSON}
+variables:
+  SSL_POLICY_PROFILE: MODERN
+  SSL_POLICY_MIN_TLS_V: "1.2"
+  CLOUDSDK_COMPUTE_ZONE: europe-west1
+  DOCKER_HOST: tcp://docker:2375/
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: ""
+  GOOGLE_APPLICATION_CREDENTIALS: ${GCP_KEY_FILE_JSON}
+services:
+  - name: docker:20-dind
+    alias: docker
+    command:
+      - --tls=false
+
+deploy:
+  environment:
+    name: Staging
+  stage: deploy
+  script: &script # adds envsubst and sponge
+    - apk --no-cache add gettext moreutils
+    - echo "GitLab CI/CD | Start Gcloud RUN"
+    - gcloud config set project  ${PROJECT_ID}
+    - gcloud run deploy branding-skon
+      --source .
+      --allow-unauthenticated
+      --platform managed
+      --region europe-west1
+      --port 80
+    - echo "GitLab CI/CD | Have Fun with the Runner"

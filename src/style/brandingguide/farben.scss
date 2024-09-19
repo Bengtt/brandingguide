@@ -1,0 +1,49 @@
+.colors {
+	display: grid;
+	gap: 26px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+
+	&__card {
+		color: $softwhite;
+		padding: 25px;
+
+		&--heading {
+			font-size: 40px;
+			font-weight: 500;
+			margin-top: 0;
+		}
+
+		&--underHeading {
+			font-size: 20px;
+			font-weight: 600;
+			margin-bottom: 0;
+		}
+
+		&--anthracite {
+			background-color: $anthracite;
+			grid-column: 1 / 3;
+		}
+
+		&--softWhite {
+			border: 4px solid $anthracite;
+			color: $anthracite;
+			grid-column: 3 / -1;
+		}
+
+		&--magenta {
+			background-color: $magenta;
+		}
+
+		&--blue {
+			background-color: $blue;
+		}
+
+		&--green {
+			background-color: $green;
+		}
+        
+		&--orange {
+			background-color: $orange;
+		}
+	}
+}

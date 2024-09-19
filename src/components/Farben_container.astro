@@ -1,0 +1,32 @@
+---
+interface Props {
+    klasse: string;
+    header: string;
+    // Display
+    rgb: string; 
+    hex: string;
+    // Druck
+    cmyk: string;
+    druck_hex: string;
+
+    patrone: string;
+
+}
+
+const {klasse, header, rgb, hex, cmyk, druck_hex, patrone} = Astro.props;
+---
+
+<div class={klasse}>
+    <h3 class="colors__card--heading">{header}</h3>
+    <p class="colors__card--underHeading">Display</p>
+    <span>
+        <p class="colors__card--text">RGB: {rgb}</p>
+        <p class="colors__card--text">{hex}</p>
+    </span>
+    <p class="colors__card--underHeading">Druck</p>
+    <span>
+        <p class="colors__card--text">CMYK: {cmyk}</p>
+        <p class="colors__card--text">{druck_hex}</p>
+    </span>
+    <p  class="colors__card--text">Patrone: {patrone}</p>
+</div>

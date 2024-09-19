@@ -1,0 +1,40 @@
+---
+import "../style/main.scss";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+
+interface Props {
+	title: string;
+    jsFiles: Array<String>;
+}
+
+const {jsFiles, title} = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<meta name="branding_guide" content='branding-skon' />
+		<title>{title}</title>
+
+
+		{jsFiles.map((data) => (
+			<script type="text/javascript" src={`../../public/include/js/${data}`}></script>
+		))}
+	</head>
+    <body>
+		<button id="scrollTopBtn" class="scroll_top_btn">
+			<img class="scroll_top_btn__img" src="/public/buttons/chevron_up.svg" alt="">
+		</button>
+		<div id="loader">
+			<img src="public/rakete/rakete-vertikal.svg" alt="" class="rocket_animation">
+		</div>
+		<Header></Header>
+        <slot></slot>
+    </body>
+	<Footer></Footer>
+</html>

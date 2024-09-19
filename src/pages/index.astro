@@ -1,0 +1,85 @@
+---
+import Logos from '@/components/logos/Logos.astro';
+import SpecialLogos from '@/components/logos/SpecialLogos.astro';
+import Layout from '../layouts/Layout.astro';
+import Hero from '@components/Hero.astro';
+import SpecialLogoDownload from '@/components/logos/logo-download/specialLogo_download.astro';
+import Plazierung from '@/components/Plazierung.astro';
+import Beispiele from '@/components/Beispiele.astro';
+import Typografie from '@/components/Typografie.astro';
+import Iconsammlung from '@/components/Icons/Iconsammlung.astro';
+import Full_Iconsammlung from '@/components/Icons/Full_Iconsammlung.astro';
+import Farben from '@/components/Farben.astro';
+import Bildwelt from '@/components/Bildwelt/Bildwelt.astro';
+import Tonaliaet from '@/components/Tonalitaet.astro';
+
+
+---
+
+<Layout 
+	title="Branding-Guide"
+	jsFiles={["main.js"]}
+>
+	
+	<Hero />
+
+	<main class="wrapper">
+
+		<div class="introduction wrapper">
+			<span class="introduction__text">„Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia amet,
+				 modi sit at adipisci velit voluptate? Nam asperiores doloremque ipsum?“
+				<span class="introduction__text--quote">-Lorem, ipsum.</span>	
+			</span>
+			<img class="introduction__image" src="/public/intro-visual.png" alt="" aria-hidden="true">
+		</div>
+
+		<Logos />
+
+		<SpecialLogos 
+			logo_png='' 
+			logo_svg=''
+		/>
+		
+		<Plazierung />
+
+		<Beispiele 
+			example1_pos_img="public/logo-beispiel-bilder/Zeichenfla╠êche 1.png"
+			example2_pos_img="public/logo-beispiel-bilder/Zeichenfla╠êche 1-1.png"
+			example3_pos_img="public/logo-beispiel-bilder/Zeichenfla╠êche 1-2.png"
+
+			example1_neg_img="public/logo-beispiel-bilder/Zeichenfla╠êche 1-3.png"
+			example2_neg_img="public/logo-beispiel-bilder/Zeichenfla╠êche 1-4.png"
+			example3_neg_img="public/logo-beispiel-bilder/Zeichenfla╠êche 1-5.png"
+
+			example1_pos_text="Positive Wort-Bild-Marke auf hellem Bild"
+			example2_pos_text="Negative Wort-Bild-Marke auf dunklen Hintergrund"
+			example3_pos_text="Negative Bild-Marke mit negativer Wort-marke"
+
+			example1_neg_text="Negative und positives Logo kombiniert"
+			example2_neg_text="Schwarzer Hintergrund"
+			example3_neg_text="Nicht CI gerechte Farbe als Hintergrund"
+		/>
+
+		<Typografie />
+
+		<Farben />
+	
+		<Full_Iconsammlung />
+
+		<Bildwelt />
+
+		<Tonaliaet />
+
+
+
+		<script>
+			window.addEventListener('load', () => {
+				setTimeout(() => {
+					document.body.classList.add('loaded');
+				}, 1500);
+			});
+
+
+		</script>
+	</main>
+</Layout>

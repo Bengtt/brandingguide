@@ -1,0 +1,253 @@
+@import 'patternlib-components/base/_colors.scss';
+@import 'patternlib-components/base/_fonts.scss';
+@import 'patternlib-components/base/_helper.scss';
+@import 'patternlib-components/base/_variables.scss';
+@import 'patternlib-components/buttons/_buttons.scss';
+@import 'patternlib-components/inputs/_dropdown.scss';
+@import 'patternlib-components/inputs/_inputs.scss';
+@import 'patternlib-components/messages/_livenotifications';
+@import 'patternlib-components/messages/_modal';
+@import 'patternlib-components/messages/_systemmessages';
+@import 'patternlib-components/tabs/_tabs';
+
+@import 'brandingguide/header.scss';
+@import 'brandingguide/nav.scss';
+@import 'brandingguide/hero.scss';
+@import 'brandingguide/footer.scss';
+@import 'brandingguide/logos/logos.scss';
+@import 'brandingguide/logos/specialLogos.scss';
+@import 'brandingguide/download_dropdown.scss';
+@import 'brandingguide/plazierung.scss';
+@import 'brandingguide/beispiele.scss';
+@import 'brandingguide/typografie.scss';
+@import 'brandingguide/iconsammlung.scss';
+@import 'brandingguide/farben.scss';
+@import 'brandingguide/bildwelt.scss';
+@import 'brandingguide/tonaliaet.scss';
+@import 'brandingguide/404.scss';
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #f4f5f5;
+	color: #333;
+	font-family: Hind;
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1240px;
+}
+
+#loader {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #f8f8f8;
+	z-index: 1;
+	visibility: visible;
+	transition: opacity 1s ease;
+  }
+
+.rocket_animation {
+	opacity: 0;
+	width: 394.2px;
+	height: 230.7px;
+	position: relative;
+	animation-name: rocketAnimation;
+	animation-duration: 3.3s;
+}
+
+@keyframes rocketAnimation {
+	0% {
+		opacity: 1;
+		animation-timing-function: ease-out;
+		transform: translateY(700px);
+	}
+
+	5% {
+		animation-timing-function: ease-in;
+		transform: translateY(650px);
+	}
+
+	15% {
+		animation-timing-function: ease-out;
+		transform: translateY(800px);
+	}
+
+	25% {
+		animation-timing-function: ease-in;
+		transform: translateY(600px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		transform: translateY(800px);
+	}
+
+	75% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(-1250px);
+	}
+}
+
+body {
+	visibility: hidden;
+	transition: opacity 1s ease;
+}
+
+body.loaded #loader {
+	opacity: 0;
+	pointer-events: none;
+}
+
+body.loaded {
+	visibility: visible;
+}
+
+.introduction {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin: 4rem auto;
+	padding: 0 1rem;
+
+	&__text {
+		display: block;
+		font-size: 30px;
+		font-weight: 500;
+		line-height: 1.17;
+		text-align: left;
+		width: 820px;
+
+		&--quote {
+			display: block;
+			margin: 2rem 0 0 7rem;
+		}
+	}
+
+	&__image {
+		margin-bottom: 225.9px;
+	}
+}
+
+.download_all {
+	display: flex;
+	gap: .5rem;
+	justify-content: center;
+	margin: 50px auto;
+
+	&__link {
+		background-color: $green;
+		border-radius: 7px;
+		color: $white;
+		font-size: 22px;
+		font-weight: 500;
+		height: 52px;
+		line-height: 52px;
+		padding: auto auto;
+		text-align: center;
+		text-decoration: none;
+		text-justify: center;
+		vertical-align: middle;
+		width: 526px;
+
+		&:hover {
+			color: $white;
+			cursor: pointer;
+		}
+
+		&:active {
+			background-color: $hovergreen;
+		}
+	}
+
+	&__link--justify {
+		margin: -16px auto 0;
+		width: 586px;
+	}
+
+	&__link--red {
+		background-color: $orange;
+        
+		&:active {
+			background-color: $hoverorange;
+		}
+	}
+
+	&__selection {
+		border: 2px solid black;
+		border-radius: 7px;
+		cursor: pointer;
+		option:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.head_logo {
+	margin: 260px auto 107px;
+	width: 785px;
+}
+
+.head-text {
+
+	&__heading {
+		font-size: 40px;
+		font-weight: 500;
+		margin: 0 0 22px;
+	}
+
+	&__textBlock {
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: 1fr 1fr;
+		margin: 0 0 75px;
+
+		&--text {
+			font-size: 20px;
+			margin: 0;
+		}
+	}
+}
+
+.scroll_top_btn {
+	width: 70px;
+	height: 70px;
+	display: none; 
+    position: fixed; 
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    background-color: $green;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+
+	&:hover {
+		background-color: $hovergreen;
+	}
+
+	&__img {
+		width: 40px;
+		height: 40px;
+	}
+}

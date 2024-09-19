@@ -1,0 +1,28 @@
+.language {
+	display: grid;
+	gap: 81px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+
+	&__item {
+		margin: 0;
+
+		&--img {
+			height: 274.8px;
+			width: 248.5px;
+		}
+        
+		&--text {
+			text-align: center;
+		}
+	}
+}
+
+.language-example {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: space-between;
+    
+	&__item {
+		margin: 90px 0 0;
+	}
+}

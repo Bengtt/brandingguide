@@ -1,0 +1,15 @@
+---
+interface Props {
+    file_href: string;
+    text1: string;
+    text2: string;
+    
+}
+
+const { file_href, text1, text2 } = Astro.props;
+---
+
+<div class="download_all">
+    <a class="download_all__link download_all__link--justify" href={file_href}>{text1}</a>
+    <a class="download_all__link download_all__link--justify download_all__link--red" href={file_href}>{text2}</a>
+</div>

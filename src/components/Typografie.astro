@@ -1,0 +1,70 @@
+---
+import { Image } from "astro:assets";
+import HindRegular from 'public/typografie-preview/hind-regular.png'
+import ReplicaSTD from "public/typografie-preview/replica-std.png"
+import TstarMono from "public/typografie-preview/tstar-mono.png"
+import Beispiele from "./Beispiele.astro";
+
+---
+
+<div id="typo"></div>
+<section class="typo wrapper">
+    <div class="head_logo">
+        <img src="public/headlines/headline-typografie.svg" alt="">
+    </div>
+
+    <div class="head-text">
+        <h2 class="head-text__heading">Hausschriften</h2>
+        <div class="head-text__textBlock">
+        
+            <p  class="head-text__textBlock--text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Beatae itaque perspiciatis ratione, ea similique illum,
+                alias sed eum qui et neque atque obcaecati dicta nemo,
+                quia tempore! Maiores, fugiat impedit! Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Pariatur veritatis
+                nihil mollitia dolores! Quaerat laboriosam quo asperiores
+                modi recusandae, commodi ratione facilis officiis unde enim
+                maiores architecto sapiente temporibus repellat!
+            </p>
+            <p  class="head-text__textBlock--text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Beatae itaque perspiciatis ratione, ea similique illum,
+                alias sed eum qui et neque atque obcaecati dicta nemo,
+                quia tempore! Maiores, fugiat impedit! Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Pariatur veritatis
+                nihil mollitia dolores! Quaerat laboriosam quo asperiores
+                modi recusandae, commodi ratione facilis officiis unde enim
+                maiores architecto sapiente temporibus repellat!
+            </p>
+        </div>
+    </div>
+        
+    <div class="typo__fonts">
+        <Image src={ReplicaSTD} alt=""/>
+        <Image src={HindRegular} alt=""/>
+        <Image class="typo__fonts--imgBot" src={TstarMono} alt=""/>
+        
+    </div>
+
+        
+    
+    <div class="download_all">
+        <a class="download_all__link" href="" download="">Alle Schriften herunterladen</a>
+    </div>
+    
+    <Beispiele 
+        example1_pos_img="public/typografie-beispiele/positiv-beispiel-01.png"
+        example2_pos_img="public/typografie-beispiele/positiv-beispiel-02.png"
+        example3_pos_img="public/typografie-beispiele/positiv-beispiel-03.png"
+
+        example1_neg_img="public/typografie-beispiele/negativ-beispiel-01.png"
+        example2_neg_img="public/typografie-beispiele/negativ-beispiel-02.png"
+        example3_neg_img="public/typografie-beispiele/negativ-beispiel-03.png"
+
+        example1_neg_text="Die Typografie soll nicht mit einem bunten Hintergrund angewendet werden. <br> Die TSTAR mono sollte nicht als Fließtext-Schrift verwendet werden."
+        example2_neg_text="Die Typografie soll nicht mit Umrandung benutzt werden."
+        example3_neg_text="Die Typografie soll nicht in Versalien-Schrift benutzt werden. Die Replica Std soll ausschließlich als Überschrift verwendet werden."
+    />
+    
+</section>

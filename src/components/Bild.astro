@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+
+
+interface Props {
+  dateiname: string;
+  alt?: string;
+  klasse?: string;
+  
+}
+
+const { dateiname, alt, klasse }  = Astro.props;
+const path      = "/public/";
+---
+
+<img class={klasse} src={`${path}${dateiname}`} alt={alt} />

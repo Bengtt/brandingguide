@@ -1,0 +1,48 @@
+.download_dropdown {
+	display: none;
+	&__logo {
+		height: 25.1px;
+		margin-bottom: 1rem;
+		position: absolute;
+		right: 22.3px;
+		top: 19.9px;
+		width: 21.5px;
+	}
+	&:hover > &__link {
+		display: block;
+	}
+	&__link {
+		display: none;
+		&--png {
+			background-color: $softwhite;
+			border: 2px solid $darkgrey;
+			border-radius: 7px 0 0 0;
+			position: absolute;
+			right: 0;
+			text-align: center;
+			text-decoration: none;
+			top: 2.8rem;
+			width: 130px;
+		}
+		&--svg {
+			background-color: $softwhite;
+			border: 2px solid $darkgrey;
+			border-radius: 0 0 0 7px;
+			position: absolute;
+			right: 0;
+			text-align: center;
+			text-decoration: none;
+			top: 4.4rem;
+			width: 130px;
+		}
+		&:hover {
+			cursor: pointer;
+			display: block;
+		}
+	}
+}
+// IMPORTANT
+// ADD:     &:hover > .download_dropdown {
+//              display: block;
+//          }
+// TO THE ITEM YOU WANT THE MENU AT!

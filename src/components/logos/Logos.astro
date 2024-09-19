@@ -1,0 +1,57 @@
+---
+import HeadLogoDownload from "./logo-download/headLogo_download.astro";
+import DownloadAllSelect from "../Download_all/download_all-select.astro";
+
+---
+<div id="logos"></div>
+
+<div id="logos" class="head_logo wrapper">
+    <img src="public/headlines/headline-logos.svg" alt="Logos">
+</div>
+
+<section class="main-logo wrapper">
+
+    <div class="head-text">
+
+        <h2 class="head-text__heading">Dachmarke</h2>
+
+        <div class="head-text__textBlock">
+            <p class="head-text__textBlock--text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ducimus laborum excepturi veritatis similique dolore fugiat
+                illo unde accusantium ut iusto velit facilis dicta totam,
+                quod voluptates quibusdam corrupti, aspernatur omnis.
+            </p>
+            <p class="head-text__textBlock--text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ducimus laborum excepturi veritatis similique dolore fugiat
+                illo unde accusantium ut iusto velit facilis dicta totam,
+                quod voluptates quibusdam corrupti, aspernatur omnis.
+            </p>
+        </div>
+    </div>
+    
+    <HeadLogoDownload klasse="logo_selection"
+        devider="logo_selection__devider" 
+        logo1="public/logos/s_kon_bildmarke_rgb_pos.svg" 
+        logo2="public/logos/s_kon_wortmarke_rgb_pos.svg" 
+        logo3="public/logos/s_kon_wortbildmarke_rgb_pos.svg"
+        logo1_png=""
+        logo2_png=""
+        logo3_png=""
+    />
+    
+    <HeadLogoDownload klasse="logo_selection logo_selection--neg"
+        devider="logo_selection__devider logo_selection--neg__devider" 
+        logo1="public/logos/s_kon_bildmarke_rgb_neg.svg" 
+        logo2="public/logos/s_kon_wortmarke_rgb_neg.svg" 
+        logo3="public/logos/s_kon_wortbildmarke_rgb_neg.svg"
+        logo1_png=""
+        logo2_png=""
+        logo3_png=""
+    />
+
+    <DownloadAllSelect 
+        file_name="logos" 
+        file_href="/public/zip/logos_svg.zip" 
+        text="Alle Dachmarken-Logos herunterladen" 
+    />
+</section>

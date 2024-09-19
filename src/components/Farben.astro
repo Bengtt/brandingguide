@@ -1,0 +1,89 @@
+---
+import FarbenContainer from "./Farben_container.astro"
+---
+
+<div id="colors"></div>
+<section class="wrapper">
+    <div class="head_logo">
+        <img src="public/headlines/headline-farben.svg" alt="">
+    </div>
+
+    <div class="head-text">
+        <h2 class="head-text__heading">Hausfarben</h2>
+        <div class="head-text__textBlock">
+            <p class="head-text__textBlock__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ducimus laborum excepturi veritatis similique dolore fugiat
+                illo unde accusantium ut iusto velit facilis dicta totam,
+                quod voluptates quibusdam corrupti, aspernatur omnis.
+            </p>
+            <p class="head-text__textBlock__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ducimus laborum excepturi veritatis similique dolore fugiat
+                illo unde accusantium ut iusto velit facilis dicta totam,
+                quod voluptates quibusdam corrupti, aspernatur omnis.
+            </p>
+        </div>
+    </div>
+    
+    <div class="colors">
+    
+        <FarbenContainer 
+            klasse="colors__card colors__card--anthracite"
+            header="Anthracite" 
+            rgb="33/51/58"
+            hex="#21333a" 
+            cmyk="10/3/0/77" 
+            druck_hex="#081F2C" 
+            patrone="5395 C"
+        />
+
+        <FarbenContainer
+            klasse="colors__card colors__card--softWhite"
+            header="Soft White" 
+            rgb="244/245/245" 
+            hex="#f4f5f5" 
+            cmyk="85/17/0/63" 
+            druck_hex="#0D5257" 
+            patrone="7476 C"
+        />
+
+        <FarbenContainer 
+            klasse="colors__card colors__card--magenta"   
+            header="Magenta" 
+            rgb="240/70/120" 
+            hex="#f04678" 
+            cmyk="86/97/0/60" 
+            druck_hex="#24135F" 
+            patrone="273 C"
+        />
+
+        <FarbenContainer 
+            klasse="colors__card colors__card--blue"
+            header="Blue" 
+            rgb="100/180/255" 
+            hex="#64b4ff" 
+            cmyk="" 
+            druck_hex="#24135F" 
+            patrone=""
+        />
+
+        <FarbenContainer 
+            klasse="colors__card colors__card--green"
+            header="Green" 
+            rgb="0/200/150" 
+            hex="#00c896" 
+            cmyk="" 
+            druck_hex="#24135F" 
+            patrone=""
+        />
+
+        <FarbenContainer 
+            klasse="colors__card colors__card--orange"
+            header="Orange" 
+            rgb="255/100/80" 
+            hex="#ff6450" 
+            cmyk="" 
+            druck_hex="#24135F" 
+            patrone=""
+        />
+    </div>    
+</section>

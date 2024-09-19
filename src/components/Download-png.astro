@@ -1,0 +1,16 @@
+---
+interface Props {
+    downloadLink_png: string;
+    filename_png: string;
+
+}
+const { downloadLink_png, filename_png } = Astro.props;
+
+---
+
+<div class="download_dropdown">
+    <img class="download_dropdown__logo" src="/public/buttons/download.svg" alt="">
+    <div class="download_dropdown__link">
+        <a class="download_dropdown__link--png" href={downloadLink_png} download={filename_png}>Download PNG</a>
+    </div>
+</div>

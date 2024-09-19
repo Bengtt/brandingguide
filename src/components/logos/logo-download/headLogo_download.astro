@@ -1,0 +1,64 @@
+---
+import DownloadDropdown from "@/components/Download_dropdown.astro"
+
+interface Props {
+    klasse: string;
+    devider: string;
+    logo1: string;
+    logo2: string;
+    logo3: string;
+    logo1_png: string;
+    logo2_png: string;
+    logo3_png: string;
+}
+const {
+
+    klasse, devider, 
+    logo1, logo1_png,  
+    logo2, logo2_png,  
+    logo3, logo3_png   
+
+} = Astro.props;
+---
+
+<ul class={klasse}>
+    <li>
+        <div class="logo_selection__item">
+            <img class="logo_selection__item--img" src={logo1} alt="">
+            <DownloadDropdown 
+                downloadLink_png={logo1_png} 
+                downloadLink_svg={logo1}
+                filename_png="S-Kon_Bild-Marke"
+                filename_svg="S-Kon_Bild-Marke"
+            />
+        </div>
+    </li>
+
+    <div class={devider}></div>
+    
+    <li>
+        <div class="logo_selection__item"> 
+            <img class="logo_selection__item--img" src={logo2} alt="">
+            <DownloadDropdown 
+                downloadLink_png={logo2_png} 
+                downloadLink_svg={logo2}
+                filename_png="S-Kon_Wort-Marke"
+                filename_svg="S-Kon_Wort-Marke"
+            />
+        </div>
+    </li>
+
+    <div class={devider}></div>
+
+    <li>
+        <div class="logo_selection__item"> 
+            <img class="logo_selection__item--img" src={logo3} alt="">
+            <DownloadDropdown 
+                downloadLink_png={logo3_png} 
+                downloadLink_svg={logo3}
+                filename_png="S-Kon_Wort-Bild-Marke"
+                filename_svg="S-Kon_Wort-Bild-Marke"
+            />
+        </div>
+    </li>
+</ul>

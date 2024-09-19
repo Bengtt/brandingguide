@@ -1,0 +1,19 @@
+.body_error {
+    visibility: visible;
+
+    .error_page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10rem;
+
+        &__text {
+            max-width: 400px;
+            text-align: left;
+
+            &--header {
+                text-align: left;
+            }
+        }
+    }
+}

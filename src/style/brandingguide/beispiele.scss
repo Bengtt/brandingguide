@@ -1,0 +1,31 @@
+.example {
+
+	&__heading {
+		font-size: 40px;
+		font-weight: 500;
+		margin-top: 190px;
+	}
+
+	&__container {
+		display: block;
+		margin: 0;
+
+		&--img {
+			max-width: 400px;
+		}
+        
+		&--text {
+			max-width: 405px;
+		}
+	}
+
+	&__pos {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+    
+	&__neg {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}

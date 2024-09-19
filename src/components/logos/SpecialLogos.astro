@@ -1,0 +1,34 @@
+---
+import SpecialLogoDownload from "./logo-download/specialLogo_download.astro"
+import DownloadAllSelect from "../Download_all/download_all-select.astro"
+---
+
+<section class="special-logo wrapper">
+
+    <div class="head-text">
+
+        <h2 class="head-text__heading">Sondermarke</h2>
+
+        <div class="head-text__textBlock">
+            <p class="head-text__textBlock__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ducimus laborum excepturi veritatis similique dolore fugiat
+                illo unde accusantium ut iusto velit facilis dicta totam,
+                quod voluptates quibusdam corrupti, aspernatur omnis.
+            </p>
+            <p class="head-text__textBlock__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ducimus laborum excepturi veritatis similique dolore fugiat
+                illo unde accusantium ut iusto velit facilis dicta totam,
+                quod voluptates quibusdam corrupti, aspernatur omnis.
+            </p>
+        </div>
+    </div>
+
+    <SpecialLogoDownload />
+
+    <DownloadAllSelect 
+        file_name = "speciallogos"
+        file_href = "/public/zip/speciallogos_svg.zip"
+        text = "Alle Sonderlogos herunter"
+    />
+
+</section>

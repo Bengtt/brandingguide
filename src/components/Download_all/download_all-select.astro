@@ -1,0 +1,20 @@
+---
+interface Props {
+    file_name: string;
+    file_href: string;
+    text: string;
+}
+
+const { file_name, file_href, text } = Astro.props;
+---
+<div class="download_all select">
+
+    <select name="selecton" class="download_all__selection">
+        <option value="svg">SVG</option>
+        <option value="png">PNG</option>
+    </select>
+
+    <a class="download_all__link" href={file_href} download="" data-file={file_name}>{text}</a>
+    
+</div>
+

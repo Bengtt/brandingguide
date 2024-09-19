@@ -1,0 +1,188 @@
+.hero {
+	align-items: center;
+	background-color: #21333a;
+	background-position: center;
+	display: flex;
+	height: 842px;
+	justify-content: center;
+	max-width: 100%;
+	background-size: 1760px;
+	padding: 19.5px 0 85.5px;
+	position: relative;
+	overflow: hidden;
+
+	&__text {
+		z-index: 1;
+		width: 661px;
+		height: 361px;
+	}
+
+	&__rocket {
+		height: 417.7px;
+		left: 133.3px;
+		position: absolute;
+		top: 57.9px;
+		width: 394.2px;
+		animation-name: rocketMove;
+		animation-duration: 8s;
+		animation-iteration-count: infinite;		
+	}
+
+	@keyframes rocketMove {
+
+		0%   {
+			top: 57.9px;
+		}
+
+		25%  {
+			top: 70px;
+		}
+
+		50%  {
+			top: 47.9px;
+		}
+
+		75%  {
+			top: 70px;
+		}
+
+		100% {
+			top: 57.9px;
+		}
+
+		}
+
+	&__planet {
+		bottom: 0;
+		position: absolute;
+		right: -100px;
+		
+	}
+
+	&__star {
+		max-height: 30px;
+		max-width: 30px;
+		animation-name: star-animation;
+		animation-duration: 4s;
+		animation-iteration-count: infinite;
+		opacity: 0%;
+
+		&--1 {
+			position: absolute;
+			top: 125px;
+			left: 157px;
+		}
+		&--2 {
+			position: absolute;
+			top: 392px;
+			left: 553px;
+		}
+		&--3 {
+			position: absolute;
+			top: 228px;
+			right: 500px;
+		}
+		&--4 {
+			position: absolute;
+			top: 670px;
+			left: 377px;
+		}
+		&--5 {
+			position: absolute;
+			top: 751px;
+			left: 98px;
+		}
+		&--6 {
+			position: absolute;
+			top: 481px;
+			left: 247px;
+		}
+		&--7 {
+			position: absolute;
+			top: 51px;
+			left: 582px;
+		}
+		&--8 {
+			position: absolute;
+			top: 670px;
+			left: 377px;
+		}
+		&--9 {
+			position: absolute;
+			bottom: 191px;
+			left: 758px;
+		}
+		&--10 {
+			position: absolute;
+			top: 711px;
+			left: 919px;
+		}
+		&--11 {
+			position: absolute;
+			top: 108px;
+			right: 749px;
+		}
+		&--12 {
+			position: absolute;
+			top: 77px;
+			right: 264px;
+		}
+		&:nth-of-type(1) {
+			animation-delay: .5s;
+		}
+		&:nth-of-type(2) {
+			animation-delay: 1.5s;
+		}
+		&:nth-of-type(3) {
+			animation-delay: 2.2s;
+		}
+		&:nth-of-type(4) {
+			animation-delay: 1.37s;
+		}
+		&:nth-of-type(5) {
+			animation-delay: 1.45s;
+		}
+		&:nth-of-type(6) {
+			animation-delay: 3s;
+		}
+		&:nth-of-type(7) {
+			animation-delay: .8s;
+		}
+		&:nth-of-type(8) {
+			animation-delay: 3.1s;
+		}
+		&:nth-of-type(9) {
+			animation-delay: 2.7s;
+		}
+		&:nth-of-type(10) {
+			animation-delay: 1.1s;
+		}
+		&:nth-of-type(11) {
+			animation-delay: 4.1s;
+		}
+		&:nth-of-type(12) {
+			animation-delay: 2.3s;
+		}
+
+	}
+
+}
+
+@keyframes star-animation {
+	0% {
+		opacity: 10%;
+	}
+
+	50% {
+		opacity: 100%;
+	}
+
+	100% {
+		opacity: 10%;
+	}
+}
+
+.nav_help {
+	background-color: $white;
+	height: 115px;
+}

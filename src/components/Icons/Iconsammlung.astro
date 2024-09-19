@@ -1,0 +1,38 @@
+---
+const {
+
+    src1, title1, iconindex1,
+    src2, title2, iconindex2,
+    src3, title3, iconindex3,
+    src4, title4, iconindex4,
+    src5, title5, iconindex5,
+    src6, title6, iconindex6,
+
+} = Astro.props;
+---
+<ul class="iconrow">
+    <li class="iconrow__li">
+        <button class="iconrow__btn" data-iconindex={iconindex1} data-title={title1}><img src="../../public/buttons/download.svg" alt=""></button>
+        <img class="iconrow__img" src={src1} alt={title1}>
+    </li>
+    <li class="iconrow__li">
+        <button class="iconrow__btn" data-iconindex={iconindex2} data-title={title2}><img src="../../public/buttons/download.svg" alt=""></button>
+        <img class="iconrow__img" src={src2} alt={title2}>
+    </li>
+    <li class="iconrow__li">
+        <button class="iconrow__btn" data-iconindex={iconindex3} data-title={title3}><img src="../../public/buttons/download.svg" alt=""></button>
+        <img class="iconrow__img" src={src3} alt={title3}>
+    </li>
+    <li class="iconrow__li">
+        <button class="iconrow__btn" data-iconindex={iconindex4} data-title={title4}><img src="../../public/buttons/download.svg" alt=""></button>
+        <img class="iconrow__img" src={src4} alt={title4}>
+    </li>
+    <li class="iconrow__li">
+        <button class="iconrow__btn" data-iconindex={iconindex5} data-title={title5}><img src="../../public/buttons/download.svg" alt=""></button>
+        <img class="iconrow__img" src={src5} alt={title5}>
+    </li>
+    <li class="iconrow__li">
+        <button class="iconrow__btn" data-iconindex={iconindex6} data-title={title6}><img src="../../public/buttons/download.svg" alt=""></button>
+        <img class="iconrow__img" src={src6} alt={title6}>
+    </li>
+</ul>

@@ -1,0 +1,31 @@
+.picture-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-content: space-around;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	&__item {
+		display: block;
+		height: max-content;
+		justify-self: center;
+		position: relative;
+
+		&--img {
+			height: 251px;
+			width: 394px;
+		}
+
+		&:hover > &--img {
+			border: solid 4px $green;
+			height: 259px;
+			margin: -4px;
+			width: 402px;
+		}
+        
+		&:hover > .download_dropdown {
+			display: block;
+		}
+	}
+}

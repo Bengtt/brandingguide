@@ -1,0 +1,47 @@
+---
+import DownloadPng from '@components/Download-png.astro'
+
+interface Props {
+    src1: string; title1:string;
+    src2: string; title2:string;
+    src3: string; title3:string;
+
+    filename_png1: string;
+    filename_png2: string;
+    filename_png3: string;
+}
+
+const {
+    src1, title1, src2, title2, src3, title3, 
+    filename_png1, filename_png2, filename_png3
+} = Astro.props;
+
+---
+<ul class="picture-row">
+    <li class="picture-row__item">
+        <img class="picture-row__item--img" src={src1} alt={title1}>
+
+        <DownloadPng
+            downloadLink_png={src1}
+            filename_png={filename_png1}
+        />        
+    </li>
+
+    <li class="picture-row__item">
+        <img class="picture-row__item--img" src={src2} alt={title2}>
+
+        <DownloadPng
+        downloadLink_png={src2}
+        filename_png={filename_png2}
+        />   
+    </li>
+
+    <li class="picture-row__item">
+        <img class="picture-row__item--img" src={src3} alt={title3}>
+
+        <DownloadPng
+        downloadLink_png={src3}
+        filename_png={filename_png3}
+        />   
+    </li>
+</ul>
