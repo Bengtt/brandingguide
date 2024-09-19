@@ -1,32 +1,16 @@
-{
-  "include": [
-    "./**/*.d.ts",
-    "./**/*.ts",
-    "./**/*.tsx"
-  ],
+{ //@ts-ignore
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ES2022"
-    ],
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "jsx": "react-jsx",
-    "moduleResolution": "Bundler",
-    "resolveJsonModule": true,
-    "module": "ES2022",
-    "target": "ES2022",
-    "strict": true,
-    "allowJs": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": [
-        "app/*"
-      ]
-    },
-    "noEmit": true
-  }
+      "@/*": ["./src/*"],
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"],
+    }
+  },
+  "include": [
+    "src/**/*.d.ts",
+    "src/**/*.ts",
+    "src/**/*.astro",
+  ]
 }
